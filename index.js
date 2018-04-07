@@ -1,26 +1,30 @@
- function p(value){
-    console.log(value);
- }
- 
 
-var katzDeliLine = [];
+var katzDeliLine = [1, 2];
 const deliLine = ["Steven", "Blake", "Avi"]
 
-deliLine.length
+var number = 1;
 
-function takeANumber(number, name){
-  number.push(name)
-  return (`Welcome, ${name}. You are number ${parseInt(number.indexOf(name))+1} in line.`)
+function takeANumber(array,num){
+  array.push(num)
+  console.log(num)
+  console.log(`Welcome. You are number ${num} in line.`)
+  ++ num
+  console.log(num)
 }
-
 
 function nowServing(firstInLine){
   if (firstInLine.length === 0){
-    return ("There is nobody waiting to be served!")
+    console.log("There is nobody waiting to be served!")
   }else{
-     return(`Currently serving ${firstInLine.shift()}.`)
+     console.log(`Currently serving number ${firstInLine.shift()}.`)
+     console.log(katzDeliLine)
   }
 }
+
+nowServing(katzDeliLine)
+nowServing(katzDeliLine)
+
+
 // "The line is currently: 1. Ada, 2. Grace, 3. Kent"
 function currentLine(line){
   if(line.length === 0){
@@ -32,7 +36,6 @@ function currentLine(line){
       
     }
     str = str.slice(0, -2);
-    return (str)
   }
 }
 
